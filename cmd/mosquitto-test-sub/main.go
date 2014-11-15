@@ -94,7 +94,7 @@ func main() {
 			panic(err)
 		}
 
-		// 終了完了を待つ
+		// Subscriptionの終了完了を待つ
 		<-receipt
 		log.Println("Subscriptionを終了しました。")
 	}()

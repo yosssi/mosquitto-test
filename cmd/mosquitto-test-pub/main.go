@@ -71,5 +71,6 @@ func main() {
 	receipt := cli.Publish(mqtt.QoS(*qos), *topic, *msg)
 	log.Println("Publishを実施しました。")
 
+	// Publishの実施完了を待つ
 	<-receipt
 }
