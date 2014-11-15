@@ -81,6 +81,7 @@ func main() {
 	}
 
 	// Subscriptionの開始
+	log.Println("Subscriptionを開始しています...")
 	if _, err := cli.StartSubscription(handle, filter); err != nil {
 		panic(err)
 	}
@@ -97,6 +98,8 @@ func main() {
 		<-receipt
 		log.Println("Subscriptionを終了しました。")
 	}()
+
+	log.Println("Subscriptionを開始しました。")
 
 	// 割り込み発生まで待つ
 WaitLoop:
