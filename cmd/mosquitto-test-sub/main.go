@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"log"
 	"os"
 	"os/signal"
@@ -30,7 +29,7 @@ const checkInterval = 1000
 
 // handleはメッセージ受信時の処理を実施する。
 func handle(_ *mqtt.MqttClient, msg mqtt.Message) {
-	fmt.Printf("Topic: %s\nMessage: %s\n", msg.Topic(), msg.Payload())
+	log.Printf("メッセージを受信しました。\nTopic: %s\nMessage: %s\n", msg.Topic(), msg.Payload())
 }
 
 func main() {
